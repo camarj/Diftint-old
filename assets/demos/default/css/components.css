@@ -4301,8 +4301,10 @@ h1 {
 
 @media only screen and (max-width: 991px) {
     .c-bg-parallax {
-        background-position: center center;
+        /* background-position: fixed; */
         background-size: cover;
+        /* background-color: transparent;
+        min-height: 100%; */
     }
 }
 
@@ -4620,7 +4622,7 @@ h1 {
     .c-layout-header .c-brand {
         float: none !important;
         display: block;
-        margin: 20px 15px 21px 15px;
+        margin: 10px 15px 21px 15px;
     }
     .c-layout-header .c-brand .c-desktop-logo-inverse {
         display: none;
