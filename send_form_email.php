@@ -2,7 +2,7 @@
 // EDIT THE 2 LINES BELOW AS REQUIRED
 $send_email_to = "info@diftinto.com";
 $email_subject = "Mensaje desde Formulario";
-function send_email($name,$email,$telefono,$email_message)
+function send_email($name,$email,$telefono,$message)
 {
   global $send_email_to;
   global $email_subject;
@@ -23,6 +23,7 @@ function validate($name,$email,$message)
   $return_array['success'] = '1';
   $return_array['name'] = '';
   $return_array['email'] = '';
+  $return_array['telefono'] = '';
   $return_array['message'] = '';
   if($email == '')
   {
