@@ -76,8 +76,7 @@ $return_array = validate($name,$email,$telefono,$message);
 
 if($return_array['success'] == '1')
 {
-	send_email($name,$email,$telefono,$message);
-}
+  send_email($name,$email,$telefono,$message);
 <script languaje='javascript' type='text/javascript'>
 //Direccionamos a la bandera donde esta el aviso
 document.querySelector(.nombre).innerHTML = "";
@@ -87,5 +86,6 @@ document.querySelector(.comentario).innerHTML = "";
 
 document.querySelector(.confirmacion).style.display = 'block';
 </script>
-<?php
+}
+
 ?>
