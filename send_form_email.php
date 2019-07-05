@@ -12,7 +12,7 @@ function send_email($name,$email,$telefono,$email_message)
   $message = "<strong>Email = </strong>".$email."<br>";
   $message .= "<strong>Name = </strong>".$name."<br>"; 
   $message .= "<strong>Name = </strong>".$telefono."<br>"; 
-  $message .= "<strong>Message = </strong>".$email_message."<br>";
+  $message .= "<strong>Message = </strong>".$email."<br>";
   @mail($send_email_to, $email_subject, $message,$headers);
   return true;
 }
@@ -21,46 +21,46 @@ function validate($name,$email,$message)
 {
   $return_array = array();
   $return_array['success'] = '1';
-  $return_array['name_msg'] = '';
-  $return_array['email_msg'] = '';
-  $return_array['message_msg'] = '';
+  $return_array['name'] = '';
+  $return_array['email'] = '';
+  $return_array['message'] = '';
   if($email == '')
   {
     $return_array['success'] = '0';
-    $return_array['email_msg'] = 'email is required';
+    $return_array['email'] = 'email is required';
   }
   else
   {
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
     if(!preg_match($email_exp,$email)) {
       $return_array['success'] = '0';
-      $return_array['email_msg'] = 'enter valid email.';  
+      $return_array['email'] = 'enter valid email.';  
     }
   }
   if($name == '')
   {
     $return_array['success'] = '0';
-    $return_array['name_msg'] = 'name is required';
+    $return_array['name'] = 'name is required';
   }
   else
   {
     $string_exp = "/^[A-Za-z .'-]+$/";
     if (!preg_match($string_exp, $name)) {
       $return_array['success'] = '0';
-      $return_array['name_msg'] = 'enter valid name.';
+      $return_array['name'] = 'enter valid name.';
     }
   }
 		
   if($message == '')
   {
     $return_array['success'] = '0';
-    $return_array['message_msg'] = 'message is required';
+    $return_array['message'] = 'message is required';
   }
   else
   {
     if (strlen($message) < 2) {
       $return_array['success'] = '0';
-      $return_array['message_msg'] = 'enter valid message.';
+      $return_array['message'] = 'enter valid message.';
     }
   }
   return $return_array;
@@ -77,8 +77,9 @@ $return_array = validate($name,$email,$telefono,$message);
 if($return_array['success'] == '1')
 {
   send_email($name,$email,$telefono,$message);
+
 <script languaje='javascript' type='text/javascript'>
-//Direccionamos a la bandera donde esta el aviso
+
 document.querySelector(.nombre).innerHTML = "";
 document.querySelector(.email).innerHTML = "";
 document.querySelector(.telefono).innerHTML = "";
