@@ -17,7 +17,7 @@ function send_email($name,$email,$telefono,$message)
   return true;
 }
 
-function validate($name,$email,$message)
+function validate($name,$email,telefono,$message)
 {
   $return_array = array();
   $return_array['success'] = '1';
@@ -78,7 +78,7 @@ $return_array = validate($name,$email,$telefono,$message);
 if($return_array['success'] == '1')
 {
   send_email($name,$email,$telefono,$message); 
-
+}
 // <script languaje='javascript' type='text/javascript'>
 
 // document.querySelector(.nombre).innerHTML = "";
@@ -88,7 +88,6 @@ if($return_array['success'] == '1')
 
 // document.querySelector(.confirmacion).style.display = 'block';
 // </script>
-}
 header('Content-type: text/json');
 echo json_encode($return_array);
 die();
