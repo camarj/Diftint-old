@@ -11,8 +11,8 @@ function send_email($name,$email,$telefono,$email_message)
   $headers .= "From: ".$email. "\r\n";
   $message = "<strong>Email = </strong>".$email."<br>";
   $message .= "<strong>Name = </strong>".$name."<br>"; 
-  $message .= "<strong>Name = </strong>".$telefono."<br>"; 
-  $message .= "<strong>Message = </strong>".$email."<br>";
+  $message .= "<strong>Telefono = </strong>".$telefono."<br>"; 
+  $message .= "<strong>Message = </strong>".$message."<br>";
   @mail($send_email_to, $email_subject, $message,$headers);
   return true;
 }
