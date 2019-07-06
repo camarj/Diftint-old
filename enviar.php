@@ -22,4 +22,6 @@ $asunto = 'Mensaje de mi sitio web';
 
 mail($para, $asunto, utf8_decode($message), $header);
 
+return print(json_encode('ok'));
+// header("Location:index.html");
 ?>
