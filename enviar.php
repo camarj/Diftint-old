@@ -19,9 +19,9 @@ isset($_POST["message"]) && !empty($_POST["message"])) {
     } 
     $message = validar_campo($_POST["message"]);
 
-    $contenido = "Nombre: " . $name . "\n Email:" . $email;
-    $contenido = "\n Telefono: " . $telefono;
-    $contenido = "\n Mensaje: " . $message;
+    $contenido = "Nombre: " . $name . "\n Email: " . $email;
+    $contenido .= "\n Telefono: " . $telefono;
+    $contenido .= "\n Mensaje: " . $message;
 
     mail($destinoMail, "Mensaje de contacto del cliente". $nombre, $contenido);
 
