@@ -7,7 +7,7 @@ function validar_campo($campo){
 }
 header('Content-type: application/json');
 
-if(isset($_POST["name"]) && !empty($_POST["nombre"]) &&
+if(isset($_POST["name"]) && !empty($_POST["name"]) &&
 isset($_POST["email"]) && !empty($_POST["email"]) &&
 isset($_POST["message"]) && !empty($_POST["message"])) {
 
