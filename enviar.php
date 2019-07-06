@@ -1,27 +1,31 @@
 <?php
-$name = $_POST['name'];
-$email = $_POST['email'];
-$telefono = $_POST['telefono'];
-$message = $_POST['message'];
 
+function validar_campo($campo){
+    $campo = trim($campo);
+    $campo = stripcslashes($campo);
+    $campo = htmlspecialchars($campo);
+}
 header('Content-type: application/json');
 
-$header = 'From: ' . $email . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
+if(isset($_POST["name"]) && !empty($_POST["nombre"]) &&
+isset($_POST["email"]) && !empty($_POST["email"]) &&
+isset($_POST["message"]) && !empty($_POST["message"])) {
 
-$mensaje = "Este mensaje fue enviado por " . $name . ",\r\n";
-$mensaje .= "Su e-mail es: " . $email . " \r\n";
-$mensaje .= "Telefono: " . $_POST['telefono'] . " \r\n";
-$mensaje .= "Mensaje: " . $_POST['message'] . " \r\n";
-$mensaje .= "Enviado el " . date('d/m/Y', time());
+    $destinoMail = "info@diftinto.com";
+    $name = validar_campo($_POST["name"]);
+    $email = validar_campo($_POST["email"]);
+    if(isset($_POST["telefono"])){
+        $telefono = validar_campo($_POST["telefono"]);
+    } 
+    $message = validar_campo($_POST["message"]);
 
-$para = 'info@diftinto.com';
-$asunto = 'Mensaje de mi sitio web';
+    $contenido = "Nombre: " . $name . "\n Email:" . $email;
+    $contenido = "\n Telefono: " . $telefono;
+    $contenido = "\n Mensaje: " . $message;
 
-mail($para, $asunto, utf8_decode($message), $header);
+    mail($destinoMail, "Mensaje de contacto del cliente". $nombre, $contenido);
 
-return print(json_encode('ok'));
-// header("Location:index.html");
-?>
+    return print(json_encode('ok'));
+}
+
+return print(json_encode('no'));

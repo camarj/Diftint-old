@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $(".formulario-contacto").bind("submit", function(){
+    $(".formulario-contacto").bind("submit", function() {
 
         $.ajax({
             type: $(this).attr("method"),
