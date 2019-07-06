@@ -19,14 +19,14 @@ $para = 'info@diftinto.com';
 $asunto = 'Mensaje de mi sitio web';
 
 mail($para, $asunto, utf8_decode($message), $header);
-// <script languaje='javascript' type='text/javascript'>
+<script languaje='javascript' type='text/javascript'>
 
-// document.querySelector(.nombre).innerHTML = "";
-// document.querySelector(.email).innerHTML = "";
-// document.querySelector(.telefono).innerHTML = "";
-// document.querySelector(.comentario).innerHTML = "";
+document.querySelector(.nombre).innerHTML = "";
+document.querySelector(.email).innerHTML = "";
+document.querySelector(.telefono).innerHTML = "";
+document.querySelector(.comentario).innerHTML = "";
 
-// document.querySelector(.confirmacion).style.display = 'block';
-// </script>
-header("Location:index.html");
+document.querySelector(.confirmacion).style.display = 'block';
+ </script>
+// header("Location:index.html");
 ?>
