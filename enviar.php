@@ -4,6 +4,8 @@ $email = $_POST['email'];
 $telefono = $_POST['telefono'];
 $message = $_POST['message'];
 
+header('Content-type: application/json');
+
 $header = 'From: ' . $email . " \r\n";
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header .= "Mime-Version: 1.0 \r\n";
@@ -19,14 +21,7 @@ $para = 'info@diftinto.com';
 $asunto = 'Mensaje de mi sitio web';
 
 mail($para, $asunto, utf8_decode($message), $header);
-<script languaje='javascript' type='text/javascript'>
 
-document.querySelector(.nombre).innerHTML = "";
-document.querySelector(.email).innerHTML = "";
-document.querySelector(.telefono).innerHTML = "";
-document.querySelector(.comentario).innerHTML = "";
-
-document.querySelector(.confirmacion).style.display = 'block';
- </script>
+return print(json_encode('ok'));
 // header("Location:index.html");
 ?>
