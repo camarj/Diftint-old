@@ -34,3 +34,4 @@ Disallow:
 Crawl-delay: 20
 Disallow: /cgi-bin/
 Disallow: /demos/
+Sitemap: https://diftinto.com/sitemap.xml
