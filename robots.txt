@@ -31,7 +31,7 @@ User-agent: yahoo-blogs/v3.9
 Disallow: 
 User-agent: *
 Disallow: 
-Crawl-delay: 20
+Crawl-delay: 1
 Disallow: /cgi-bin/
 Disallow: /demos/
 Sitemap: https://diftinto.com/sitemap.xml
