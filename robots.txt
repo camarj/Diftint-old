@@ -37,4 +37,5 @@ Disallow: /demos/
 Disallow: /cookiepolicy.html
 Disallow: /assets/base/
 Disallow: /assets/demos/
+Disallow: /blog/author/
 Sitemap: https://diftinto.com/sitemap.xml
