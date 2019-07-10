@@ -34,4 +34,7 @@ Disallow:
 Crawl-delay: 1
 Disallow: /cgi-bin/
 Disallow: /demos/
+Disallow: /cookiepolicy.html
+Disallow: /assets/base/
+Disallow: /assets/demos/
 Sitemap: https://diftinto.com/sitemap.xml
