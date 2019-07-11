@@ -35,6 +35,7 @@ Crawl-delay: 1
 Disallow: /cgi-bin/
 Disallow: /demos/
 Disallow: /cookiepolicy.html
+Disallow: /contactanos.html
 Disallow: /assets/base/
 Disallow: /assets/demos/
 Disallow: /blog/author/
