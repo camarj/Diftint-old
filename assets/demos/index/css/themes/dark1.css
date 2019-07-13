@@ -239,7 +239,7 @@ a {
   border-color: #525e64 !important; }
 
 .c-content-line-icon.c-theme {
-  background-image: url(../../../../base/img/content/line-icons/dark1.png); }
+  background-image: url(../../../../base/img/content/line-icons/dark1.webp); }
 
 .c-content-list-1.c-theme.c-separator-dot > li:before,
 .c-content-list-1.c-theme > li:before {
@@ -256,7 +256,7 @@ a {
   color: #525e64; }
 
 .c-content-tab-2.c-theme > ul > li.active > a > .c-content-line-icon, .c-content-tab-2.c-theme > ul > li:hover > a > .c-content-line-icon {
-  background-image: url(../../../../base/img/content/line-icons/dark1.png); }
+  background-image: url(../../../../base/img/content/line-icons/dark1.webp); }
 
 .c-content-tab-5.c-theme .c-nav-tab > li.active > a,
 .c-content-tab-5.c-theme .c-nav-tab > li a:hover {
@@ -339,4 +339,4 @@ a {
     background: #525e64; }
 
 .tp-banner-container.c-theme .tparrows.circle {
-  background-image: url(../../../../base/img/content/line-icons/dark1.png); }
+  background-image: url(../../../../base/img/content/line-icons/dark1.webp); }
